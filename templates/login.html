@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <div class="text-center">
+
+ <link href="{{url_for('static', filename='css/signin.css')}}" rel="stylesheet">
+ 
+    <form class="form-signin" action="/dashboard" method="post">
+      {% set fname = 'img/'+  params['login_image']  %}
+      <img class="mb-4" src="{{url_for('static', filename=fname)}}" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Admin Login</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input type="text" id="uname" class="form-control" name="uname" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="pass" class="form-control" name="pass" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin:200">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">© {{params['blog_name'] }} 2017-2018</p>
+    </form>
+
+
+  {% endblock %}

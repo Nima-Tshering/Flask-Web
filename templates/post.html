@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <!-- Page Header -->
+    {%  set fname='img/'+po.file_image %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename=fname) }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>{{po.title}}</h1>
+              <h2 class="subheading">{{po.content[0:120]}}....</h2>
+              <span class="meta">Posted by
+                <a href="#">Admin</a>
+                on {{po.date}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            {{po.content}}
+          </div>
+        </div>
+      </div>
+    </article>
+
+   {% endblock %}

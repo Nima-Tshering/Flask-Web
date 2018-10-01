@@ -1,0 +1,19 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri":"mysql+pymysql://root:@localhost/flask",
+    "pro_uri":"mysql+pymysql://root:@localhost/flask",
+    "fb_url":"https://facebook.com",
+    "two_url":"https://twitter.com",
+    "git_url":"https://github.com",
+    "user":"nimatshering49@gmail.com",
+    "pass":"9734833314",
+    "blog_name":"Thunder Bird",
+    "login_image":"py.png",
+    "admin_user":"gyarongNT",
+    "admin_pass":"nima",
+    "upload_location":"F:\\Education\\Python\\Flask\\static\\img"
+  }
+
+}
